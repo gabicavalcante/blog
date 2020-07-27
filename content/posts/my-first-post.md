@@ -1,7 +1,6 @@
 ---
 title: Take a picture with OpenCv and Galileo
 date: 2016-01-16T13:44:03+00:00
-draft: true
 
 ---
 Hello, 
