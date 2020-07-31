@@ -2,11 +2,16 @@ baseURL = "https://gabicavalcante.github.io/"
 languageCode = "en-us"
 publishDir = "public"
 theme = "hugo-theme-console"
-title = "gabi cavalcante" 
+title = "gabi cavalcante"
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
   titleCutting = true
+  
+  twitter  = "https://www.twitter.com/_gabiCavalcante"
+  facebook = "https://www.facebook.com/"
+  github   = "https://www.github.com/gabicavalcante"
+  linkedin = "https://www.linkedin.com/in/gabrielacavalcante/"
 
   [[params.navlinks]]
   name = "about/"
@@ -15,3 +20,11 @@ title = "gabi cavalcante"
   [[params.navlinks]]
   name = "posts/"
   url = "posts/"
+
+  [[params.navlinks]]
+  name = "cv/"
+  url = "cv/"
+
+
+
+    
