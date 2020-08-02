@@ -112,6 +112,7 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 
 # Education
 
+
 | School                                    | Year               | Type Major                                  |
 | ----------------------------------------- | ------------------ | ------------------------------------------- |
 | Federal University of Rio Grande do Norte | 2016 - in progress | Bachelor                                    | Science Computer |
@@ -124,7 +125,7 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 | -------------- | ---- | ---------------- | ------------------------------------------------------------------------------------------------------- |
 | MongoDB Basics | 2020 | Mongo University | [Link](https://university.mongodb.com/course_completion/c4c38ed7-fe17-4877-a2fc-8c096451b9b8/printable) |
 
-## Languages
+# Languages
 
 | Language   | Level        |
 | ---------- | ------------ |
@@ -132,7 +133,7 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 | English    | Intermediate |
 | French     | A2           |
 
-## Volunteer Work
+# Volunteer Work
 
 | Event              | Role      | Locality | Date   |
 | ------------------ | --------- | -------- | ------ |
@@ -141,13 +142,16 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 | Django Girls Natal | Organizer | Brazil   | Apr/17 |
 | Django Girls Natal | Organizer | Brazil   | Apr/18 |
 
-## Talks and Workshops
+# Talks and Workshops
 
 | Title                        | Type | Conference              | Locality      | Date   |
 | ---------------------------- | ---- | ----------------------- | ------------- | ------ |
+| Web Scraping                 | Talk |                         | [Slides](https://slides.com/gabicavalcante/web-scraping) |        |
+| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil | Aug/19 |
 | What I learned with PyLadies | Talk | 1° PyLadies Brazil Conf | Natal, Brazil | Out/18 |
+| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil | Aug/16 |
 
-## Articles
+# Articles
 
 - [Build a Secure Twilio Webhook with Python and FastAPI](https://www.twilio.com/blog/build-secure-twilio-webhook-python-fastapi)
 - [Build a Secret Santa Bot for WhatsApp Using Python and Twilio](https://www.twilio.com/blog/build-secret-santa-bot-whatsapp-python-twilio)
