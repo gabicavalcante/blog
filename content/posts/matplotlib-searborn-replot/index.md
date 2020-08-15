@@ -1,6 +1,6 @@
 +++
-title = "A guide to setup  plots using seaborn facegrid/replot plots"
-date = "2019-09-30"
+title = "A guide to setup plots using seaborn facegrid/replot plots"
+date = "2020-08-15"
 +++
 
 Using searborn and matplotlib to make great plobs isn't easy. 
