@@ -3,75 +3,83 @@ title = "Python, Django and GitHub CI/CD"
 date = "2019-09-30"
 +++
 
-GitHub Actions was introduced last year, and it’s an API for cause and effect on GitHub. You can orchestrate any workflow, based on any event, you can have your workflow run on push events to master and release branches, or only run on `pull_request` events that target the master branch, or run every day of the week at Friday 02:00. The workflows are code in a repository, as you will see in this project, so you can create, share, reuse, and fork.
 
 <!--more-->
-
-I’m working in a Django project and when I started I found a problem: there was not CI/CD working or integration/unit test. In the past I used the GitLab CI/CD, but now the code was hosted on GitHub. So, my challenge was create tests to my Django project (it was implemented before I got the job) and create CI/CD pipeline for integrating it with GitHub CI/CD. For this tutorial, the application that I’m gonna show you, demonstrates CRUD operations using class based views in Django (you can find here). It also includes UI for all CRUD views and it’s based on the semaphoreci.com tutorial.
-
 
 
 * Local project setup
 
+```python
+
+f = sns.relplot(data=long_centered_mean_stl_ma.query("locality_name == 'Lombardia' and category=='parks'"), x="date", y="value", hue="variable",
+                col="locality_name", col_wrap=2, kind="line", height=6, legend="brief", aspect=1.5, 
+                  markers=True, dashes=True, facet_kws={'sharey': True, 'sharex': False})
+
+f._legend.remove()
+ 
+plt.subplots_adjust(#left=0.125,
+                    bottom=0.1, 
+                    #right=0.9, 
+                    top=0.9, 
+                    #wspace=0.2, 
+                    hspace=0.35
+                    )
+
+# Iterate thorugh each axis
+for ax in f.axes:
+    ax.set(xlabel='Date', ylabel='Value') 
+
+    handles, labels = ax.get_legend_handles_labels()
+    #if handles:
+    set_labels = [l.capitalize() for l in labels[1:]]
+    ax.legend(
+        labels=set_labels, 
+        title="", 
+        fancybox=True, 
+        framealpha=1, 
+        #shadow=True, 
+        borderpad=1, 
+        loc='upper left', 
+        fontsize=12, 
+        #frameon=False, 
+        handleheight = 0.1,
+      )
+
+    # Make x and y-axis labels slightly larger
+    ax.set_xlabel(ax.get_xlabel(), fontsize=16)
+    ax.set_ylabel(ax.get_ylabel(), fontsize=16)
+
+    #set ticks every week
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator())
+    #set major ticks format
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=4))
+
+    # Make title more human-readable and larger
+    if ax.get_title():
+        ax.set_title("")
+
+    # Make right ylabel more human-readable and larger 
+    if ax.texts:
+        # This contains the right ylabel text
+        txt = ax.texts[0]
+        ax.text(txt.get_unitless_position()[0], txt.get_unitless_position()[1],
+                txt.get_text().split('=')[1],
+                transform=ax.transAxes,
+                va='center',
+                fontsize='xx-large')
+        # Remove the original text
+        ax.texts[0].remove()
+        
+
+restriction_date = datetime.strptime('2020-02-23', '%Y-%m-%d') 
+ease_restriction_date = datetime.strptime("2020-05-11", '%Y-%m-%d')
+
+plt.axvline(restriction_date, color='k', linestyle='dashed', linewidth=1)
+plt.axvline(ease_restriction_date, color='k', linestyle='dashed', linewidth=1)
+
+plt.tick_params(axis='both',labelsize=13)
+
+axes = plt.gca() 
+axes.set_ylim([-120, 220])
 ```
-$ virtualenv -p python3 env
-```
-
-* Download the project
-
-```
-$ git clone https://github.com/gabicavalcante/django-test-ci.git
-```
-
-* Install pip requirements
-
-```
-$ pip install -r requirements.txt
-```
-
-* Create a new psql database
-
-```
-postgres=# create database pydjango;
-```
-
-Setup your database credentials and `SITE_URL` in `settings.py` file available inside core folder.
-
-Once you have setup your database, open command prompt and run the migrate command to create the application default database and the superuser.
-
-```
-(env) $ python manage.py migrate
-(env) $ python manage.py createsuperuser
-```
-
-After all of the above command run successfully, let’s run:
-
-```
-(env) $ python manage.py runserver
-```
-
-And visit the web browser with http://127.0.0.1:8000
-
-# Environment variables
-
-The following environment variables can be set to override defaults:
-
-- `SECRET_KEY`: Django secret key.
-- `DB_ENGINE`: Django database backend.
-- `DB_NAME`: database name.
-- `DB_HOST`: database hostname.
-- `DB_PORT`: database port.
-- `DB_USER`: database user.
-- `DB_PASSWORD`: database password.
-
-# Test with PyTest
-
-To tell `pytest` witch Django settings that should be used for tests runs, we need to setup a `pytest` configuration file, called `pytest.ini` in our project root directory. The file contains:
-
-```
-[pytest]
-DJANGO_SETTINGS_MODULE=core.test_settings
-addopts = --nomigrations --cov=. --cov-report=html
-```
-
-To run the tests, we can invoke directly `pytest` command instead of `manage.py test`. The pytest-django is designed to run with the pytest command, but in case of you want to use `manage.py test` with pytest-django, you can create [a simple test runner](https://pytest-django.readthedocs.io/en/latest/faq.html#how-can-i-use-manage-py-test-with-pytest-django).
