@@ -8,7 +8,7 @@ Hi! My name is Gabi Cavalcante. I'm a software engineer passionate for Python, D
 
 <!--more-->
 
-Graduated in Information Technology at the Federal University of Rio Grande do Norte (UFRN) with Sandwich Degree (2015-2016) fulled funded in France (Polytech Nice Sophia) by the exchange program BRAFITEC. Undergraduate in progress in Computer Science at UFRN.
+I hold a BSc in Information Technology from Universidade Federal do Rio Grande do Norte (UFRN), Natal, Brazil, obtained in 2018. During the 2015-2016 academic year, I was awarded a scholarship by the BRAFITEC exchange program, and studied at Polytech Nice Sophia, France. Currently, I am an undergraduate in Computer Science at UFRN, planning on enrolling as an M.Sc. student.
 
 Areas of interest include Self-adaptive Systems, Data Science, Automatization, Tests, Quality Engineer. I am also a of the founder of PyLadies of Brasil.
 
@@ -24,7 +24,7 @@ Areas of interest include Self-adaptive Systems, Data Science, Automatization, T
 
 I work at [Cloudia](https://www.cloudia.com.br/), we build a intelligent virtual assistant for medical clnics. I specificly work with the chatbot and creating solutions focusing in tests and estability. Now my challage is to optimizate the data processing and the transfer of a large amount of data between the services.
 
-At Cloudia I work mostly with Python, and web frameworks like [Flask]() and [FastAPI](), but I also build a [chatbot load testing in Golang](https://github.com/gabicavalcante/chatbot-load-testing), to simulate many users seding messages to a bot and register a few metrics (CPU, memory, threads, uptime), the idea is check the performance of a bot keeping a conversation. Another tecnology that I use is the Redis Queue, recentily to build a broadcast microservice using FastAPI.
+At Cloudia I work mostly with Python, and web frameworks like [Flask](http://flask.palletsprojects.com) and [FastAPI](http://fastapi.tiangolo.com), but I also build a [chatbot load testing in Golang](https://github.com/gabicavalcante/chatbot-load-testing), to simulate many users seding messages to a bot and register a few metrics (CPU, memory, threads, uptime), the idea is check the performance of a bot keeping a conversation. Another tecnology that I use is the Redis Queue, recentily to build a broadcast microservice using FastAPI.
 
 I also made a CI/CD to run our tests and deploy the code using Github Actions, so now all pull request only can be merged if all tests passed ;)
 
@@ -36,7 +36,7 @@ I also made a CI/CD to run our tests and deploy the code using Github Actions, s
 | ---------- | ------- | ------- |
 | Python Dev | 08/2019 | 03/2020 |
 
-I worked at TSMX developing solutions for the management system for internet providers. I created a solution to optimize the generation of large pdf reports, I also implemented integration with [Cielo](https://desenvolvedores.cielo.com.br/api-portal/en/content/api-ecommerce) and [GalaxPay](https://www.galaxpay.com.br/) to build a payment solution that allows simple transactions and recurring payments (the major request from the clients). Another contribution was to implement a feature to generate Nota Fiscal ([an official document that proves the existence of a commercial act](https://thebrazilbusiness.com/article/complete-guide-to-issue-nota-fiscal-in-brazil)). This solution was based on the original lib [PyTrustNFe](https://github.com/gabicavalcante/PyTrustNFe) with my additional support to my State Government rules. 
+I worked at TSMX developing solutions for the management system for internet providers. I created a solution to optimize the generation of large pdf reports, I also implemented integration with [Cielo](https://desenvolvedores.cielo.com.br/api-portal/en/content/api-ecommerce) and [GalaxPay](https://www.galaxpay.com.br/) to build a payment solution that allows simple transactions and recurring payments (the major request from the clients). Another contribution was to implement a feature to generate Nota Fiscal ([an official document that proves the existence of a commercial act](https://thebrazilbusiness.com/article/complete-guide-to-issue-nota-fiscal-in-brazil)). This solution was based on the original lib [PyTrustNFe](https://github.com/gabicavalcante/PyTrustNFe) with my additional support to my State Government rules.
 
 **Technologies**: Python, Flask Framework, Django, Postgres, Pytest.
 
@@ -48,7 +48,7 @@ I worked at TSMX developing solutions for the management system for internet pro
 | ------------------- | ------- | ------- |
 | Back-end Python Dev | 01/2019 | 07/2019 |
 
-[Surfmappers](https://www.surfmappers.com/home) is a marketplace for surf photos, a platform to help photographers to sell surf shots. The company created a similar solution for CrossFit athletes, the [Crossmappers](https://www.crossmappers.com/). 
+[Surfmappers](https://www.surfmappers.com/home) is a marketplace for surf photos, a platform to help photographers to sell surf shots. The company created a similar solution for CrossFit athletes, the [Crossmappers](https://www.crossmappers.com/).
 
 I provided solutions for the backend side of Crossmappers, using tecnologies as Python, Pyramid, Flask and MongoDB. I developed a solution for face recognition to find the athletes faces in the snaps and suggest for them buy it. I used the [MAX-Facial-Recognizer](https://github.com/gabicavalcante/MAX-Facial-Recognizer), a project developed as part of the IBM Code Model Asset Exchange using a model is based on the [FaceNet model](https://github.com/davidsandberg/facenet).
 
@@ -112,7 +112,6 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 
 # Education
 
-
 | School                                    | Year               | Type Major                                  |
 | ----------------------------------------- | ------------------ | ------------------------------------------- |
 | Federal University of Rio Grande do Norte | 2016 - in progress | Bachelor                                    | Science Computer |
@@ -144,12 +143,12 @@ In December/2013 I started to work remotely as an Python Developer Intern at Anc
 
 # Talks and Workshops
 
-| Title                        | Type | Conference              | Locality      | Date   |
-| ---------------------------- | ---- | ----------------------- | ------------- | ------ |
-| Web Scraping                 | Talk |                         | [Slides](https://slides.com/gabicavalcante/web-scraping) |        |
-| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil | Aug/19 |
-| What I learned with PyLadies | Talk | 1° PyLadies Brazil Conf | Natal, Brazil | Out/18 |
-| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil | Aug/16 |
+| Title                                                           | Type | Conference               | Locality                                                 | Date   |
+| --------------------------------------------------------------- | ---- | ------------------------ | -------------------------------------------------------- | ------ |
+| Web Scraping                                                    | Talk |                          | [Slides](https://slides.com/gabicavalcante/web-scraping) |        |
+| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil                                            | Aug/19 |
+| What I learned with PyLadies                                    | Talk | 1° PyLadies Brazil Conf  | Natal, Brazil                                            | Out/18 |
+| Python: O poder da linguagem, diversidade e mercado de trabalho | Talk | Campus Party Recife 2016 | Natal, Brazil                                            | Aug/16 |
 
 # Articles
 
