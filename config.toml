@@ -4,27 +4,28 @@ publishDir = "public"
 theme = "hugo-theme-console"
 title = "gabi cavalcante"
 
+[author]
+github = "https://github.com/gabicavalcante"
+homepage = "https://gabicavalcante.me"
+name = "Gabi Cavalcante"
+
 [params]
-  # Cutting off the page title to two chars for mobile (console-demo -> co)
-  titleCutting = true
-  
-  twitter  = "https://www.twitter.com/_gabiCavalcante"
-  facebook = "https://www.facebook.com/"
-  github   = "https://www.github.com/gabicavalcante"
-  linkedin = "https://www.linkedin.com/in/gabrielacavalcante/"
+# Cutting off the page title to two chars for mobile (console-demo -> co)
 
-  [[params.navlinks]]
-  name = "about/"
-  url = "about/"
+facebook = "https://www.facebook.com/"
+github = "https://www.github.com/gabicavalcante"
+linkedin = "https://www.linkedin.com/in/gabrielacavalcante/"
+titleCutting = true
+twitter = "https://www.twitter.com/_gabiCavalcante"
 
-  [[params.navlinks]]
-  name = "posts/"
-  url = "posts/"
+[[params.navlinks]]
+name = "about/"
+url = "about/"
 
-  [[params.navlinks]]
-  name = "cv/"
-  url = "cv/"
+[[params.navlinks]]
+name = "posts/"
+url = "posts/"
 
-
-
-    
+[[params.navlinks]]
+name = "cv/"
+url = "cv/"
