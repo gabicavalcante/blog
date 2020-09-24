@@ -4,13 +4,12 @@ date = "2020-08-15"
 +++
 
 Using searborn and matplotlib to make great plobs isn't easy. 
-I have been loiking on the internet for complete tutorials about how to setup a good plot, but I only found small peaces of tips.
-So now I want to show the final plots that I build. 
+I have been looking on the internet for complete tutorials about how to setup a good plot, but I only found small peaces of code.
+So now I want to show a few tips to plot data using the Google Global Mobility Report and matplotlib.
 
 <!--more-->
 
-
-Let's start import all libaries that we need.
+You can run the code using colab, find the complete tutorial here. But now, let's start import all libaries that we need.
 
 ```python
 import matplotlib.pyplot as plt
@@ -18,7 +17,7 @@ import pandas as pd
 import seaborn as sns
 ```
 
-We need to get some data to our example, so I'm going to use the Google Global Mobility Report.
+Now we can read the data:
 
 ```python
 google_mobility_url = (
@@ -37,28 +36,41 @@ column_names = {
     "transit_stations_percent_change_from_baseline": "transit_stations",
     "workplaces_percent_change_from_baseline": "workplaces",
     "residential_percent_change_from_baseline": "residential",
-   "country_region": "locality_name"
+    "country_region": "locality_name"
 }
 data = dt_original.rename(columns=column_names)
 
 # filter the data and drop unnecessary columns
-regions = ["Japan", "South Korea", "Canada", "Germany", "Spain", "Argentina", "New Zealand"]
-data = data.query(f"locality_name in {regions}").drop(columns=["census_fips_code", "metro_area", "iso_3166_2_code", "sub_region_1", "sub_region_2"])
+regions = ["Japan", "Canada", "Germany", "Argentina"]
+columns_to_drop = ["census_fips_code", "metro_area", "iso_3166_2_code", "sub_region_1", "sub_region_2", "country_region_code"]
+data = data.query(f"locality_name in {regions}").drop(columns=columns_to_drop)
 ```
 
-A simple plot
-```
-sns.relplot(
-      x="date", 
-      y="value", 
-      hue="category", 
-      data = data_to_plot, 
-      col="locality_name"
+We have the data that we need, now we can build a simple plot to show the values of all categories over time.
+
+```python
+# first we melt the dataframe, to transform some column in rows.
+long_data = data.melt(id_vars=["locality_name", "date"], var_name="category", value_name="value")
+long_regions_plot = sns.relplot(
+    x="date", 
+    y="value", 
+    hue="category", 
+    data = long_data, 
+    col="locality_name", 
+    col_wrap=2, 
+    kind="line", 
+    height=6, 
+    legend="brief", 
+    aspect=1.5, 
+    markers=True, 
+    dashes=True
 )
 ```
+![alt text](plot1.png "Title")
 
-The final results
-```
+Looks good! But I can't read the title, the legend is small so the axis too.
+
+```python
 import matplotlib.dates as mdates
 
 
